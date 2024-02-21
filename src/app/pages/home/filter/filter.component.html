@@ -1,0 +1,24 @@
+<div>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input
+      matInput
+      [ngModel]="query"
+      (ngModelChange)="onQueryChange($event)"
+      #input
+    />
+  </mat-form-field>
+  <div class="order">
+    <mat-button-toggle-group
+      [ngModel]="order"
+      (change)="orderChange.emit($event.value)"
+    >
+      <mat-button-toggle value="asc">
+        <mat-icon>arrow_upward</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="desc">
+        <mat-icon>arrow_downward</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
