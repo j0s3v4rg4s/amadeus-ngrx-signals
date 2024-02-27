@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy,
+import {
   Component,
   EventEmitter,
-  Input,
-  Output, } from '@angular/core';
+  input,
+  Output,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -17,8 +18,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent {
-  @Input() query = '';
-  @Input() order: SortOrder = 'asc';
+  readonly query = input('');
+  readonly order = input<SortOrder>('asc');
 
   @Output() readonly queryChange = new EventEmitter<string>();
   @Output() readonly orderChange = new EventEmitter<SortOrder>();

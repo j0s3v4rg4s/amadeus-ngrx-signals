@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "amadeus-signals:build:production"
+              "buildTarget": "amadeus-signals:build:production"
             },
             "development": {
-              "browserTarget": "amadeus-signals:build:development"
+              "buildTarget": "amadeus-signals:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "amadeus-signals:build"
+            "buildTarget": "amadeus-signals:build"
           }
         },
         "test": {
@@ -102,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
